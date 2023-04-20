@@ -7,7 +7,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface StoresApi {
-
     @GET(".")
     suspend fun loginUser(
         @Query("email") email:String,
