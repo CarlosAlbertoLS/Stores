@@ -1,0 +1,20 @@
+package com.sonder.tiendas.ui.listStores.stores
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.sonder.tiendas.R
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class StoresFragment : Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_stores, container, false)
+    }
+}

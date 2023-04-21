@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainStores">
+
+    <fragment
+        android:id="@+id/mainStores"
+        android:name="com.sonder.tiendas.ui.listStores.stores.StoresFragment"
+        android:label="fragment_stores"
+        tools:layout="@layout/fragment_stores" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.sonder.tiendas.ui.listStores.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/addStores"
+        android:name="com.sonder.tiendas.ui.listStores.addStore.AddStoreFragment"
+        android:label="fragment_add_store"
+        tools:layout="@layout/fragment_add_store" />
+</navigation>
