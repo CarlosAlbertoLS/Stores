@@ -7,4 +7,6 @@
     <string name="dialog_title">Se deben llenar los campos</string>
     <string name="dialog_confirm">Aceptar</string>
     <string name="dialog_cancel">Cancelar</string>
+    <string name="signin">Signin</string>
+    <string name="login_til_name">Nombre</string>
 </resources>

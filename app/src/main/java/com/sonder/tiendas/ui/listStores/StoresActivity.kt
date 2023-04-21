@@ -8,7 +8,7 @@ import com.sonder.tiendas.databinding.ActivitySignInBinding
 
 class StoresActivity : AppCompatActivity() {
     companion object {
-        fun create(context: Context) = Intent(context, StoresActivity::class.java)
+        fun createStores(context: Context) = Intent(context, StoresActivity::class.java)
     }
     private lateinit var binding: ActivitySignInBinding
     override fun onCreate(savedInstanceState: Bundle?) {

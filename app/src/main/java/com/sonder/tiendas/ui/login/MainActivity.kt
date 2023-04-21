@@ -16,7 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     companion object {
-        fun create(context: Context) = Intent(context, MainActivity::class.java)
+        fun createMin(context: Context) = Intent(context, MainActivity::class.java)
     }
     private lateinit var binding: ActivityMainBinding
     private val viewModel by viewModels<MainActivityViewModel>()
@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         if (!token.isNullOrBlank()) {
             navigateToHome()
         }
-
         /*viewModel.loginResult.observe(this) {
             when (it) {
                 is BaseResponse.Loading -> {
@@ -59,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun navigateToHome() = startActivity(MainActivity.create(this@MainActivity))
+    private fun navigateToHome() = startActivity(MainActivity.createMin(this@MainActivity))
 
     fun doLogin() {
         val email = binding.etEmail.text.toString() ?: ""
@@ -80,7 +79,7 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 
-    private fun openStoresList() = startActivity(StoresActivity.create(this@MainActivity))
+    private fun openStoresList() = startActivity(StoresActivity.createStores(this@MainActivity))
 
-    private fun openSignIn() = startActivity(SignInActivity.create(this@MainActivity))
+    private fun openSignIn() = startActivity(SignInActivity.createSignIn(this@MainActivity))
 }

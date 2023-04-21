@@ -1,4 +1,4 @@
-package com.sonder.tiendas.data
+package com.sonder.tiendas.data.network.repository
 
 import com.sonder.tiendas.core.NetworkModule
 import com.sonder.tiendas.data.network.LoginService
