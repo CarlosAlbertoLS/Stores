@@ -3,4 +3,5 @@
     <integer name="counter_max_password">8</integer>
     <integer name="counter_max_mail">40</integer>
     <integer name="counter_max_name">35</integer>
+    <integer name="photo_profile">150</integer>
 </resources>

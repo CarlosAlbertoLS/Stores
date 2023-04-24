@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.sonder.tiendas.R
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val token = SessionManager.getToken(this)
+        Log.i("token", token.toString())
         if (!token.isNullOrBlank()) {
             navigateToHome()
         }
@@ -58,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun navigateToHome() = startActivity(MainActivity.createMin(this@MainActivity))
+    private fun navigateToHome() = startActivity(StoresActivity.createStores(this@MainActivity))
 
     fun doLogin() {
         val email = binding.etEmail.text.toString() ?: ""
