@@ -3,7 +3,7 @@
     <string name="login">Login</string>
     <string name="helperRequire">Requerido</string>
     <string name="login_til_password">Password</string>
-    <string name="login_til_email">E-mail</string>
+    <string name="login_til_email">Email</string>
     <string name="dialog_title">Se deben llenar los campos</string>
     <string name="dialog_confirm">Aceptar</string>
     <string name="dialog_cancel">Cancelar</string>

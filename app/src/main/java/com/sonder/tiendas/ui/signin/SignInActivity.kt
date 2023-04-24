@@ -2,19 +2,13 @@ package com.sonder.tiendas.ui.signin
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import android.view.View
-import android.widget.Toast
 import androidx.activity.viewModels
-import com.sonder.tiendas.data.network.model.StoresResponse
-import com.sonder.tiendas.data.network.utils.Constants
-import com.sonder.tiendas.data.network.utils.SessionManager
+import androidx.appcompat.app.AppCompatActivity
 import com.sonder.tiendas.databinding.ActivitySignInBinding
 import com.sonder.tiendas.ui.listStores.StoresActivity
-import com.sonder.tiendas.ui.login.MainActivityViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -40,11 +34,8 @@ class SignInActivity : AppCompatActivity() {
         viewModel.isLoading.observe(this) { visibility ->
             binding.pbCreateUser.visibility = visibility
         }
-        viewModel.onSignInSelected(email, password, name)
-        /*viewModel.responseToken.observe(this){tokenResponse ->
-            Log.i("signin", tokenResponse.token)
-        }*/
-        Log.i("signin", "$email, $password, $name")
+        viewModel.onSignInSelected(email, password, name, this@SignInActivity)
+        startActivity(StoresActivity.createStores(this@SignInActivity))
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
